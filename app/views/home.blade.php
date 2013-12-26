@@ -16,5 +16,16 @@
 <script src="assets/js/collections.js"></script>
 <script src="assets/js/views.js"></script>
 <script src="assets/js/router.js"></script>
+
+<script>
+	new App.Router;
+	Backbone.history.start();
+
+	App.contacts = new App.Collections.Contacts;
+
+	App.contacts.fetch().then( function(){
+		new App.Views.App({ collection: App.contacts });
+	})
+</script>
 </body>
 </html>

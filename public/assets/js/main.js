@@ -14,12 +14,5 @@ window.template = function(id){
 	return _.template( $('#'+id).html() );
 };
 
-App.Models.Task = Backbone.Model.extend({
-	defaults:{
-		title:'',
-		completed: 0,
-		id: ''
-	},
-	urlRoot: 'index.php/tasks'
-});
+
 })();
