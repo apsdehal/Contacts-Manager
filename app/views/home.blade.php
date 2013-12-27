@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Contact Manager</title>
+	<style type="text/css">
+	table thead td {
+		font-weight: bold;
+		}
+	#addContact{
+		margin-bottom: 2em;
+	}
+	</style>
 </head>
 <body>
 
@@ -27,6 +35,23 @@
 
 {{ Form::close() }}
 
+<table id="allContacts">
+	<thead>
+		<tr>
+			<td>First Name</td>
+			<td>Last Name</td>
+			<td>Email Address</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+
+</table>
+<script id="allContactsTemplate" type="text/template">
+	<td><%= first_name %></td>
+	<td><%= last_name %></td>
+	<td><%= email_address %></td>
+	<td><%= description %></td>
+</script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/underscore.js"></script>
 <script src="assets/js/backbone.js"></script>

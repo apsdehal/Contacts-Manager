@@ -4,7 +4,7 @@ App.Models.Contact = Backbone.Model.extend({
 				return 'First Name and Last Name are required';
 		}
 
-		if(!attr.email_address){
+		if(!attrs.email_address){
 			return 'Email address is neccessary';
 		}
 	}
