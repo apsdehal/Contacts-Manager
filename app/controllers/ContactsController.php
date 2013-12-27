@@ -29,7 +29,7 @@ class ContactsController extends \BaseController {
 	 */
 	public function store()
 	{
-		Contact::create(Input::all());
+		return Contact::create(Input::all());
 	}
 
 	/**
@@ -74,7 +74,7 @@ class ContactsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return Contact::find($id)->delete();
+		 Contact::find($id)->delete();
 	}
 
 }
